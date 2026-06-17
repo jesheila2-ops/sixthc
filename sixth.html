@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Got a Mail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Playfair+Display:wght@500;600&family=Yellowtail&family=Caveat:wght@500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sixth.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+  <source src="herewithme.mp3" type="audio/mpeg">
+</audio>
+
+  <div class="page" id="p0">
+    <div class="card">
+      <div class="envelope-title">You got a mail!</div>
+
+      <button class="envelope-wrap" id="envBtn" aria-label="Open the envelope">
+        <svg class="envelope-svg" viewBox="0 0 380 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- back of envelope -->
+          <rect x="10" y="10" width="360" height="240" rx="6" fill="#ee9fc1"/>
+
+          <!-- side + bottom shadow flaps -->
+          <polygon points="10,10 10,250 140,148" fill="#e58fb3"/>
+          <polygon points="370,10 370,250 240,148" fill="#e58fb3"/>
+
+          <!-- top flap, opens on tap -->
+          <polygon class="flap" points="10,10 190,148 370,10" fill="#e487ad"/>
+
+          <!-- wax seal -->
+          <g class="seal">
+            <circle cx="190" cy="158" r="34" fill="#f3c4d8"/>
+            <circle cx="190" cy="158" r="34" fill="none" stroke="#eaa9c5" stroke-width="2"/>
+            <path d="M190 140 C178 145, 170 152, 170 160 C170 168, 178 172, 190 165
+                     C202 172, 210 168, 210 160 C210 152, 202 145, 190 140 Z" fill="#eaa9c5"/>
+            <circle cx="190" cy="158" r="5" fill="#f3c4d8"/>
+          </g>
+        </svg>
+      </button>
+
+      <div class="envelope-hint">tap the envelope for the surprise...</div>
+    </div>
+  </div>
+
+  <!-- PAGE 2: HAPPY BIRTHDAY -->
+  <div class="page page-photo" id="p1">
+    <div class="photo-bg"></div>
+    <div class="photo-overlay"></div>
+    <div class="birthday-text">
+      <h1 class="birthday-title">Happy Birthday</h1>
+      <p class="birthday-subtitle">my favorite person</p>
+    </div>
+  </div>
+
+  <!-- PAGE 3: LETTER (reveals on scroll, not click) -->
+  <div class="page page-letter scroll-reveal" id="p2">
+
+    <svg class="letter-decor decor-blossom" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#f6c6dc" opacity="0.95">
+        <ellipse cx="60" cy="40" rx="22" ry="14" transform="rotate(20 60 40)"/>
+        <ellipse cx="85" cy="30" rx="22" ry="14" transform="rotate(-10 85 30)"/>
+        <ellipse cx="105" cy="50" rx="22" ry="14" transform="rotate(60 105 50)"/>
+        <ellipse cx="75" cy="60" rx="22" ry="14" transform="rotate(100 75 60)"/>
+        <ellipse cx="40" cy="65" rx="20" ry="13" transform="rotate(150 40 65)"/>
+      </g>
+      <circle cx="72" cy="48" r="8" fill="#e8729c"/>
+    </svg>
+
+    <svg class="letter-decor decor-vine" viewBox="0 0 120 400" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 0 C40 60, -10 100, 30 160 C60 210, 5 260, 35 320 C55 360, 15 390, 30 400"
+            fill="none" stroke="#f7d4e3" stroke-width="2.5" opacity="0.8"/>
+      <g fill="#f7d4e3" opacity="0.8">
+        <ellipse cx="32" cy="70" rx="10" ry="6" transform="rotate(40 32 70)"/>
+        <ellipse cx="-2" cy="140" rx="10" ry="6" transform="rotate(-30 -2 140)"/>
+        <ellipse cx="42" cy="230" rx="10" ry="6" transform="rotate(50 42 230)"/>
+        <ellipse cx="10" cy="300" rx="10" ry="6" transform="rotate(-20 10 300)"/>
+      </g>
+    </svg>
+
+    <svg class="letter-decor decor-roses" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#f4b9d3" stroke-width="1.6" opacity="0.6">
+      <circle cx="70" cy="110" r="38"/>
+      <circle cx="70" cy="110" r="24"/>
+      <circle cx="70" cy="110" r="12"/>
+      <circle cx="160" cy="150" r="46"/>
+      <circle cx="160" cy="150" r="30"/>
+      <circle cx="160" cy="150" r="15"/>
+      <path d="M10 190 C40 150, 90 150, 110 190"/>
+      <path d="M120 195 C150 145, 210 145, 230 195"/>
+    </svg>
+
+    <svg class="letter-decor decor-lily" viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#ef9bbf">
+        <path d="M110 80 C80 30, 40 30, 30 70 C60 90, 90 95, 110 80 Z"/>
+        <path d="M110 80 C140 30, 180 30, 190 70 C160 90, 130 95, 110 80 Z"/>
+        <path d="M110 80 C95 35, 110 10, 130 5 C140 40, 130 70, 110 80 Z"/>
+        <path d="M110 80 C70 95, 50 130, 70 150 C100 135, 115 105, 110 80 Z"/>
+        <path d="M110 80 C150 95, 170 130, 150 150 C120 135, 105 105, 110 80 Z"/>
+      </g>
+      <circle cx="110" cy="80" r="9" fill="#c9577f"/>
+    </svg>
+
+    <div class="polaroid polaroid-1">
+      <div class="polaroid-photo"></div>
+    </div>
+    <div class="polaroid polaroid-2">
+      <div class="polaroid-photo"></div>
+    </div>
+
+    <div class="letter-stack">
+      <div class="letter-page back2"></div>
+      <div class="letter-page back1"></div>
+      <div class="letter-page front">
+        <h2 class="letter-heading">A letter for you 💜</h2>
+
+<div class="letter-body">
+  <p>Hi HANDSOME BOY,</p>
+
+  <p>
+    HAPPY BIRTHDAY DONG!!! I hope you enjoy your special day. You know,
+    when we first met, I had no idea that you'd become this important to me.
+    And now, I never want to lose you, because my life has been so much better
+    since the day I met you.
+  </p>
+
+  <p>
+    I choose you, and I'll choose you, over and over and over. Without pause,
+    without a doubt, in a heartbeat. I'll keep choosing you. God knows how much
+    I'm grateful to have you in my life. I will give you everything, the love
+    that you deserve and have always wanted to have.
+  </p>
+
+  <p>
+    I'm willing to risk anything and everything for you no matter what happens.
+    I may not be the best girlfriend that you've had, but I promise you that
+    I would do anything for your happiness. I want to grow old with you, and
+    I want you to grow old with me.
+  </p>
+
+  <p>
+    Thanks for being there for me, for listening to my rants, for never giving
+    up on me, and for loving me. I hope I make you as happy as you make me.
+  </p>
+
+  <p>
+    Thank you for the way you love me — patiently, gently, without ever making
+    me feel like I'm too much. Thank you for staying when things are heavy and
+    choosing me when it would be easier not to. I don't think you realize how
+    many pieces of me you've held together just by being there.
+  </p>
+
+  <p>
+    You loved me at my lowest without asking me to be stronger first. You saw
+    my hurt and treated it with care. You made space for the parts of me that
+    didn't know how to ask for help. Loving you has changed me in ways I'll
+    never be able to fully explain, but I carry it with me in everything I am.
+  </p>
+
+  <p>
+    I am grateful in a way that hurts — because being loved by you showed me
+    how much I went without before. And no matter what this life brings, I will
+    always know what it feels like to be truly, deeply loved.
+  </p>
+
+  <p>
+    You know the places I used to go when I was down and stressed, but it
+    turned out I was happy because I was with you. It's my favorite thing —
+    sharing life's ups and downs together, sharing happiness, and making many
+    memories together.
+  </p>
+
+  <p>
+    I love you so much, and I'll always love you as much as I can. You'll
+    always be my favorite person. Happy Birthday again, my favorite bestyyy.
+  </p>
+
+  <p><strong>DARLING 💜</strong></p>
+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 4: OUR MEMORIES (also reveals on scroll) -->
+  <div class="page page-memories scroll-reveal" id="p3">
+
+    <!-- fairy lights -->
+    <svg class="lights-string" viewBox="0 0 1200 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <!-- string -->
+      <path d="M0,20 Q120,55 240,22 Q360,55 480,22 Q600,55 720,22 Q840,55 960,22 Q1080,55 1200,22"
+            fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+      <!-- bulbs -->
+      <g>
+        <line x1="120" y1="40" x2="120" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="120" cy="61" rx="7" ry="9" fill="#ffd6ec" opacity="0.9"/>
+        <ellipse cx="120" cy="61" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="240" y1="26" x2="240" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="240" cy="47" rx="7" ry="9" fill="#ffc4e0" opacity="0.9"/>
+        <ellipse cx="240" cy="47" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="360" y1="40" x2="360" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="360" cy="61" rx="7" ry="9" fill="#ffe0f0" opacity="0.9"/>
+        <ellipse cx="360" cy="61" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="480" y1="26" x2="480" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="480" cy="47" rx="7" ry="9" fill="#ffb8d8" opacity="0.9"/>
+        <ellipse cx="480" cy="47" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="600" y1="40" x2="600" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="600" cy="61" rx="7" ry="9" fill="#ffd6ec" opacity="0.9"/>
+        <ellipse cx="600" cy="61" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="720" y1="26" x2="720" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="720" cy="47" rx="7" ry="9" fill="#ffc4e0" opacity="0.9"/>
+        <ellipse cx="720" cy="47" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="840" y1="40" x2="840" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="840" cy="61" rx="7" ry="9" fill="#ffe0f0" opacity="0.9"/>
+        <ellipse cx="840" cy="61" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="960" y1="26" x2="960" y2="40" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="960" cy="47" rx="7" ry="9" fill="#ffb8d8" opacity="0.9"/>
+        <ellipse cx="960" cy="47" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+      <g>
+        <line x1="1080" y1="40" x2="1080" y2="54" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+        <ellipse cx="1080" cy="61" rx="7" ry="9" fill="#ffd6ec" opacity="0.9"/>
+        <ellipse cx="1080" cy="61" rx="4" ry="5" fill="#fff" opacity="0.5"/>
+      </g>
+    </svg>
+
+    <!-- scattered stickers -->
+    <svg class="mem-sticker mem-sticker-tl" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 10 C18 10, 10 18, 10 28 C10 42, 30 52, 30 52 C30 52, 50 42, 50 28 C50 18, 42 10, 30 10 Z" fill="#ffb8d8"/>
+    </svg>
+    <svg class="mem-sticker mem-sticker-tr" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+      <path d="M25 5 L28.5 18 L43 18 L31.5 26.5 L35.5 40 L25 31.5 L14.5 40 L18.5 26.5 L7 18 L21.5 18 Z" fill="#ffd6ec"/>
+    </svg>
+    <svg class="mem-sticker mem-sticker-bl" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="22" cy="22" r="16" fill="none" stroke="#ffb8d8" stroke-width="2.5"/>
+      <path d="M22 10 C14 10, 8 15, 8 22 C8 32, 22 38, 22 38 C22 38, 36 32, 36 22 C36 15, 30 10, 22 10 Z" fill="#ffc4e0" opacity="0.6"/>
+    </svg>
+    <svg class="mem-sticker mem-sticker-br" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <path d="M28 5 L32 21 L49 21 L36 31 L41 48 L28 38 L15 48 L20 31 L7 21 L24 21 Z" fill="#ffe0f0"/>
+    </svg>
+    <svg class="mem-sticker mem-sticker-mid" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 4 C10 4, 4 10, 4 16 C4 26, 18 32, 18 32 C18 32, 32 26, 32 16 C32 10, 26 4, 18 4 Z" fill="#ffb8d8"/>
+    </svg>
+
+    <p class="memories-tagline">a little collection of us</p>
+    <h2 class="memories-title">Our Memories</h2>
+
+    <div class="memories-grid">
+      <div class="mem-polaroid mem-p1">
+        <div class="memory-photo mp1"></div>
+        <div class="mem-caption">us 🌿</div>
+      </div>
+      <div class="mem-polaroid mem-p2">
+        <div class="memory-photo mp2"></div>
+        <div class="mem-caption">my fave 💜</div>
+      </div>
+      <div class="mem-polaroid mem-p3">
+        <div class="memory-photo mp3"></div>
+        <div class="mem-caption">together 🫶</div>
+      </div>
+      <div class="mem-polaroid mem-p4">
+        <div class="memory-photo mp4"></div>
+        <div class="mem-caption">our moment ✨</div>
+      </div>
+      <div class="mem-polaroid mem-p5">
+        <div class="memory-photo mp5"></div>
+        <div class="mem-caption">forever 🤍</div>
+      </div>
+    </div>
+
+    <!-- bottom wave -->
+    <svg class="memories-wave" viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 Q180,0 360,30 Q540,60 720,30 Q900,0 1080,30 Q1260,60 1440,30 L1440,60 L0,60 Z" fill="rgba(180,40,80,0.25)"/>
+    </svg>
+  </div>
+
+  <!-- PAGE 5: BIRTHDAY BOY (also reveals on scroll) -->
+  <div class="page page-bday-boy scroll-reveal" id="p4">
+
+    <svg class="bb-decor decor-balloons" viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.55">
+      <path d="M60 60 C60 30, 100 30, 100 60 C100 90, 80 100, 80 120"/>
+      <path d="M100 50 C100 20, 145 20, 145 50 C145 82, 122 92, 122 115"/>
+      <path d="M30 70 C30 45, 65 45, 65 70 C65 98, 47 106, 47 128"/>
+      <circle cx="80" cy="55" r="2" fill="#ffffff" stroke="none"/>
+      <circle cx="122" cy="45" r="2" fill="#ffffff" stroke="none"/>
+      <circle cx="47" cy="65" r="2" fill="#ffffff" stroke="none"/>
+    </svg>
+
+    <div class="bb-photo-side">
+      <div class="bb-title">
+        <span class="bb-title-line1">Birthday</span>
+        <span class="bb-title-line2">Boy</span>
+      </div>
+
+      <div class="photo-collage">
+        <div class="bb-photo bp1"></div>
+        <div class="bb-photo bp2"></div>
+        <div class="bb-photo bp3"></div>
+        <div class="bb-photo bp4"></div>
+        <div class="bb-photo bp5"></div>
+      </div>
+    </div>
+
+    <div class="letter-stack bb-letter">
+      <div class="letter-page back2"></div>
+      <div class="letter-page back1"></div>
+      <div class="letter-page front">
+        <h2 class="letter-heading">for my birthday boy</h2>
+        <div class="letter-body">
+          <p>happy birthday, my love 🤍</p>
+          <p>today i just want to celebrate you, the person who makes every ordinary day feel a little brighter. thank you for being exactly who you are.</p>
+          <p>i hope this year brings you everything you've been working for, and more. i'm so lucky to celebrate you, always.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 6: CLOSING NOTE (final page, reveals on scroll) -->
+  <div class="page page-closing scroll-reveal" id="p5">
+
+    <svg class="closing-lily" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#f6d3e2">
+        <path d="M110 110 C70 60, 20 70, 15 110 C55 130, 90 130, 110 110 Z"/>
+        <path d="M110 110 C150 55, 100 20, 70 30 C70 70, 85 95, 110 110 Z"/>
+        <path d="M110 110 C140 150, 100 175, 75 165 C80 135, 95 120, 110 110 Z"/>
+        <path d="M110 110 C160 110, 175 145, 155 165 C125 150, 115 130, 110 110 Z"/>
+      </g>
+      <circle cx="110" cy="110" r="8" fill="#e893b5"/>
+
+      <g fill="#fbe6ee" transform="translate(60 30) scale(0.8)">
+        <path d="M110 110 C70 60, 20 70, 15 110 C55 130, 90 130, 110 110 Z"/>
+        <path d="M110 110 C150 55, 100 20, 70 30 C70 70, 85 95, 110 110 Z"/>
+        <path d="M110 110 C140 150, 100 175, 75 165 C80 135, 95 120, 110 110 Z"/>
+        <path d="M110 110 C160 110, 175 145, 155 165 C125 150, 115 130, 110 110 Z"/>
+      </g>
+      <circle cx="170" cy="140" r="6" fill="#e893b5"/>
+    </svg>
+
+    <div class="closing-card-wrap">
+      <div class="closing-gingham"></div>
+
+      <div class="closing-note">
+        <p>happy birthday to my favorite person 🤍</p>
+        <p>thank you for making life feel softer, lighter, and happier. here's to many more birthdays just like this one, and every ordinary day in between, with you.</p>
+      </div>
+
+      <div class="closing-stamp">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#f0a7c4">
+            <path d="M30 30 C22 14, 4 18, 6 32 C18 38, 26 36, 30 30 Z"/>
+            <path d="M30 30 C38 12, 56 18, 54 32 C42 38, 34 36, 30 30 Z"/>
+            <path d="M30 30 C20 42, 22 56, 34 54 C36 44, 34 36, 30 30 Z"/>
+          </g>
+          <circle cx="30" cy="30" r="4" fill="#c9577f"/>
+        </svg>
+      </div>
+
+      <div class="closing-polaroid">
+        <div class="closing-polaroid-photo"></div>
+      </div>
+
+      <svg class="closing-star" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="starGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#eef2f5"/>
+            <stop offset="55%" stop-color="#b9c2c9"/>
+            <stop offset="100%" stop-color="#838c94"/>
+          </linearGradient>
+        </defs>
+        <path d="M30 2 L37 22 L58 22 L41 35 L48 56 L30 43 L12 56 L19 35 L2 22 L23 22 Z" fill="url(#starGrad)"/>
+      </svg>
+    </div>
+  </div>
+
+  <script src="sixth.js"></script>
+</body>
+</html>
